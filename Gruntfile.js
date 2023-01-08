@@ -3,14 +3,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-        'gh-pages': {
-            options: {
-                base: 'dist'
-            },
-            src: ['**']
-        },
-
+        
         connect: {
           dev: {
             options: {
@@ -52,9 +45,10 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: [
-                    {src: 'node_modules/director/build/director.min.js', dest: './dist/js/vendor/director.min.js'},
-                    {src: 'node_modules/react/addin.js', dest: './dist/js/vendor/react-with-addons.min.js'},
-                    {src: ['node_modules/lodash/dist/lodash.min.js'], dest: './dist/js/vendor/lowdash.min.js'},
+                    {src: 'node_modules/routie/dist/routie.min.js', dest: 'dist/js/vendor/routie.min.js'},
+                    {src: 'node_modules/react/addin.js', dest: 'dist/js/vendor/react-with-addons.js'},
+                    {src: 'node_modules/lodash/dist/lodash.min.js', dest: 'dist/js/vendor/lodash.min.js'},
+                    {expand:true, cwd: 'node_modules/bootstrap/fonts/', src: ['*'], dest: 'dist/style/vendor/bootstrap/fonts/'},
                 ]
             }
         },
@@ -93,7 +87,7 @@ module.exports = function (grunt) {
                     patterns: [
                         {
                             match: 'pkg_name',
-                            replacement: '<%= pkg.name %>.min'
+                            replacement: '<%= pkg.name %>'
                         }
                     ]
                 },
@@ -126,7 +120,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                  'dist/js/<%= pkg.name %>.min.js': ['dist/js/<%= pkg.name %>.js']
+                  'dist/js/<%= pkg.name %>.js': ['dist/js/<%= pkg.name %>.js']
                 }
             }
         },
@@ -142,8 +136,6 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
   
-  grunt.loadNpmTasks('grunt-gh-pages');
-
   grunt.registerTask('devBuild', [
     'copy:dev',
     'replace:dev',

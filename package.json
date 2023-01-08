@@ -22,7 +22,6 @@
   ],
   "dependencies": {
     "bootstrap": "^3.1.1",
-    "grunt-gh-pages": "^4.0.0",
     "lodash": "^2.4.1",
     "normalize-css": "^2.3.1",
     "react": "^0.10.0",
