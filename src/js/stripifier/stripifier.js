@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+var React = require('react/addons');
 
 var ResultRenderer = require('./../result-renderer.js');
 var Extractor = require('./pixel-extractor.js');

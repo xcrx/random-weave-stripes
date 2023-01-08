@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+var React = require('react/addons');
 
 function componentToHex(c) {
     var hex = c.toString(16);

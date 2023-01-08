@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-
+var React = require('react/addons');
 
 var KindInput = React.createClass({
     getInitialState: function () {

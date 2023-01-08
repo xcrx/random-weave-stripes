@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-
+var React = require('react/addons');
 
 var Application = require('./application');
 var Stripifier = require('./stripifier/stripifier');

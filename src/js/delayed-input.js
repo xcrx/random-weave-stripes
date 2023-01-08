@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-
+var React = require('react/addons');
 
 var In = React.createClass({
     getInitialState: function () {

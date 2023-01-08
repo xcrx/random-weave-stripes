@@ -37,18 +37,17 @@ module.exports = function (grunt) {
         copy: {
             dev: {
                 files: [
-                    {src: ['src/test.html'], dest: 'development/test.html'},
-                    {src: ['bower_components/routie/dist/routie.min.js'], dest: 'development/js/vendor/routie.min.js'},
-                    {src: ['bower_components/react/react-with-addons.js'], dest: 'development/js/vendor/react-with-addons.js'},
-                    {src: ['bower_components/lodash/dist/lodash.min.js'], dest: 'development/js/vendor/lodash.min.js'},
-                    {expand:true, cwd: 'bower_components/bootstrap/fonts/', src: ['*'], dest: 'development/style/vendor/bootstrap/fonts/'},
+                    {src: 'node_modules/routie/dist/routie.min.js', dest: 'development/js/vendor/routie.min.js'},
+                    {src: 'node_modules/react/addin.js', dest: 'development/js/vendor/react-with-addons.js'},
+                    {src: 'node_modules/lodash/dist/lodash.min.js', dest: 'development/js/vendor/lodash.min.js'},
+                    {expand:true, cwd: 'node_modules/bootstrap/fonts/', src: ['*'], dest: 'development/style/vendor/bootstrap/fonts/'},
                 ]
             },
             dist: {
                 files: [
-                    {src: ['bower_components/director/build/director.min.js'], dest: './dist/js/vendor/director.min.js'},
-                    {src: ['bower_components/react/react-with-addons.min.js'], dest: './dist/js/vendor/react-with-addons.min.js'},
-                    {src: ['bower_components/lodash/dist/lodash.min.js'], dest: './dist/js/vendor/lowdash.min.js'},
+                    {src: ['node_modules/director/build/director.min.js'], dest: './dist/js/vendor/director.min.js'},
+                    {src: ['node_modules/react/lib/ReactWithAddons.js'], dest: './dist/js/vendor/react-with-addons.min.js'},
+                    {src: ['node_modules/lodash/dist/lodash.min.js'], dest: './dist/js/vendor/lowdash.min.js'},
                 ]
             }
         },

@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
+var React = require('react/addons');
 
 var Icon = require('./bootstrap/icon');
 var storage = require('./storage');
-
 
 var UploadWifForm = React.createClass({
     onSubmit: function () {

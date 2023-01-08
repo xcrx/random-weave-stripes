@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
+var React = require('react/addons');
 
 var MathUtils = require('./math-utils');
 var Point = require('./data/point');
