@@ -4,7 +4,7 @@ Random Weave Stripes
 Tool to create random stripes for weaving
 
 # Try it out
-http://kajwiklund.github.io/random-weave-stripes/app/
+https://xcrx.github.io/random-weave-stripes/#
 
 ## Warning!
 Data is only stored in your browser and might break if there's any changes made to the app
