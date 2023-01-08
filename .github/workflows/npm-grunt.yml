@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: Checkout 🛎️
-        uses: actions/checkout@v3
+      uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -29,6 +29,6 @@ jobs:
         grunt dist
 
     - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist # The folder the action should deploy.
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist # The folder the action should deploy.
