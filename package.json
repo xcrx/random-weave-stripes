@@ -3,16 +3,16 @@
   "version": "0.0.9",
   "description": "Tool to create random stripes for weaving",
   "main": "index.js",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/kajwiklund/random-weave-stripes"
+    "url": "https://github.com/xcrx/random-weave-stripes"
   },
   "author": "Kaj Wiklund",
   "license": "MIT",
-  "homepage": "https://github.com/kajwiklund/random-weave-stripes",
+  "homepage": "https://xcrx.github.io/random-weave-stripes",
   "bugs": {
-    "url": "https://github.com/kajwiklund/random-weave-stripes/issues"
+    "url": "https://github.com/xcrx/random-weave-stripes/issues"
   },
   "keywords": [
     "reactjs",
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.1.1",
+    "grunt-gh-pages": "^4.0.0",
     "lodash": "^2.4.1",
     "normalize-css": "^2.3.1",
     "react": "^0.10.0",

@@ -4,6 +4,13 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
+        },
+
         connect: {
           dev: {
             options: {
@@ -45,8 +52,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: [
-                    {src: ['node_modules/director/build/director.min.js'], dest: './dist/js/vendor/director.min.js'},
-                    {src: ['node_modules/react/lib/ReactWithAddons.js'], dest: './dist/js/vendor/react-with-addons.min.js'},
+                    {src: 'node_modules/director/build/director.min.js', dest: './dist/js/vendor/director.min.js'},
+                    {src: 'node_modules/react/addin.js', dest: './dist/js/vendor/react-with-addons.min.js'},
                     {src: ['node_modules/lodash/dist/lodash.min.js'], dest: './dist/js/vendor/lowdash.min.js'},
                 ]
             }
@@ -134,6 +141,8 @@ module.exports = function (grunt) {
   });
 
   require('load-grunt-tasks')(grunt);
+  
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('devBuild', [
     'copy:dev',
