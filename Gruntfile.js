@@ -65,6 +65,17 @@ module.exports = function (grunt) {
                     // target.css file: source.less file
                     "development/style/main.css": "src/themes/main.less"
                 }
+            },
+            dist: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    optimization: 2
+                },
+                files: {
+                    // target.css file: source.less file
+                    "dist/style/main.css": "src/themes/main.less"
+                }
             }
         },
 
@@ -153,6 +164,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dist', [
     'clean:dist',
+    'less:dist',
     'copy:dist',
     'replace:dist',
     'browserify:dist',
